@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 47% 6%;      /* Very dark slate - bg-[#090d16] */
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 47% 9%;            /* Panel bg - bg-[#0f1524] */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 47% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;          /* Light gray/slate */
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 12%;    /* Slate-800 - bg-[#172033] */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 12%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 15%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 72% 35%;        /* Dark Red - critical */
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 14%;       /* Subtle panel border */
+    --input: 217.2 32.6% 12%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --radius: 0.25rem;               /* Tight, professional border radius */
+  }
+
+  /* Force dark mode */
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom severity indicator helpers */
+.severity-green {
+  color: #10b981;
+  background-color: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.severity-yellow {
+  color: #f59e0b;
+  background-color: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.severity-orange {
+  color: #ea580c;
+  background-color: rgba(234, 88, 12, 0.1);
+  border: 1px solid rgba(234, 88, 12, 0.2);
+}
+
+.severity-red {
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.severity-critical {
+  color: #f87171;
+  background-color: rgba(153, 27, 27, 0.3);
+  border: 1px solid rgba(153, 27, 27, 0.5);
+}
+
+/* Hide scrollbar for compact viewports */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
